@@ -15,6 +15,7 @@ import 'sunmi_styles.dart';
 
 class SunmiPrinter {
   static const String RESET = "reset";
+
   // static const String START_PRINT = "startPrint";
   // static const String STOP_PRINT = "stopPrint";
   // static const String IS_PRINTING = "isPrinting";
@@ -26,6 +27,7 @@ class SunmiPrinter {
   static const String PRINT_TEXT = "printText";
   static const String PRINT_ROW = "printRow";
   static const String PRINT_IMAGE = "printImage";
+  static const String PRINT_QR = "printQr";
 
   static const MethodChannel _channel =
       const MethodChannel('flutter_sunmi_printer');
@@ -129,6 +131,18 @@ class SunmiPrinter {
     await _channel.invokeMethod(PRINT_IMAGE, {
       "base64": base64,
       "align": align.value,
+    });
+  }
+
+  static Future<void> printQr(
+    String data, {
+    int moduleSize: 5,
+    int errorLevel: 3,
+  }) async {
+    await _channel.invokeMethod(PRINT_QR, {
+      "data": data,
+      "moduleSize": moduleSize,
+      "errorLevel": errorLevel,
     });
   }
 }

@@ -1,1 +1,2 @@
+include ':flutter_sunmi_printer'
 rootProject.name = 'flutter_sunmi_printer'
