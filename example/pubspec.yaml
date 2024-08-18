@@ -3,7 +3,7 @@ description: Demonstrates how to use the flutter_sunmi_printer plugin.
 publish_to: "none"
 
 environment:
-  sdk: ">=2.7.0 <3.0.0"
+  sdk: ">=3.0.0 <4.0.0"
 
 dependencies:
   flutter:
@@ -11,7 +11,7 @@ dependencies:
 
   flutter_sunmi_printer:
     path: ../
-  cupertino_icons: ^0.1.3
+  cupertino_icons: ^1.0.8
 
 dev_dependencies:
   flutter_test:
