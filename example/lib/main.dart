@@ -1,5 +1,5 @@
-import 'dart:typed_data';
 import 'dart:convert';
+
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_sunmi_printer/flutter_sunmi_printer.dart';
@@ -75,7 +75,7 @@ class _MyAppState extends State<MyApp> {
           children: <Widget>[
             SizedBox(height: 50),
             Center(
-              child: RaisedButton(
+              child: MaterialButton(
                 onPressed: _print,
                 child: const Text('Print demo', style: TextStyle(fontSize: 20)),
               ),

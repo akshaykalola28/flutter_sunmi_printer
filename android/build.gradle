@@ -25,6 +25,7 @@ rootProject.allprojects {
 apply plugin: 'com.android.library'
 
 android {
+    namespace "com.tablemi.flutter_sunmi_printer"
     compileSdkVersion 28
 
     defaultConfig {
